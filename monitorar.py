@@ -16,7 +16,7 @@ def qualidade_ar():
 # now let's check how many transactions we have
 import pandas as pd
 
-url = 'https://firms.modaps.eosdis.nasa.gov/mapserver/mapkey_status/?MAP_KEY=MAP_KEY'
+url = 'https://firms.modaps.eosdis.nasa.gov/mapserver/mapkey_status/?MAP_KEY=%s' % MAP_KEY
 try:
   df = pd.read_json(url,  typ='series')
   print(df)
@@ -28,11 +28,13 @@ except:
 @monitorar_app.route('/api/queimadas', methods=['GET'])
 def queimadas():
     # URL da API FIRMS para os últimos 2 dias de dados MODIS para o Brasil
-    brazil_url = 'https://firms.modaps.eosdis.nasa.gov/api/country/csv/17343acfed7602e4e67842d7d2a98edb/VIIRS_NOAA20_NRT/BRA/2'
+    brazil_url = 'https://firms.modaps.eosdis.nasa.gov/api/country/csv/%s/VIIRS_NOAA21_NRT/BRA/2' % MAP_KEY
 
     df_brazil = pd.read_csv(brazil_url)
 
     json_brazil = df_brazil.to_dict(orient='records')  # Transforma diretamente em lista de dicionários 
+
+    print(json_brazil)
     
     # Retornar os dados como resposta JSON
     return jsonify(json_brazil)

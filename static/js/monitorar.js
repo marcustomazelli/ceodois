@@ -15,11 +15,7 @@ fetch('/api/queimadas')// Faz uma requisição para a URL do backend que fornece
                 fillOpacity: 0.7
             })
             .addTo(map) // Adiciona o marcador ao mapa
-            .bindPopup(() => {
-                const brilho = fire.brightness !== undefined ? fire.brightness : 'N/A';
-                const confianca = fire.confidence !== undefined ? fire.confidence : 'N/A';
-                return `<b>Brilho:</b> ${brilho}<br><b>Confiança:</b> ${confianca}`;
-            }); 
+            .bindPopup(`<b>Brilho:</b> ${fire.brightness}<br><b>Confiança:</b> ${fire.confidence}`); 
         });
     })
     .catch(error => console.error('Erro ao buscar os dados:', error)); // Captura e exibe erros na requisição
