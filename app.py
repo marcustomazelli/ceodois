@@ -10,12 +10,12 @@ app.register_blueprint(calculadora_app)
 app.register_blueprint(monitorar_app)
 
 # Rota principal para renderizar a página inicial
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
-import os
 
 if __name__ == '__main__':
-    port = int(os.getenv("PORT", 5000))  # Porta definida pela Railway ou 5000 como padrão
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
