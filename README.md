@@ -1,7 +1,7 @@
 
 # 🌳 CEODOIS
 
-![img-ceodois](/static/img/img-logo/gif.gif)
+![img-ceodois](/static/img/img-site/gif.gif)
 
 
 ![CEODOIS](https://img.shields.io/badge/Sustentabilidade%20e%20Tecnologia-green)  
