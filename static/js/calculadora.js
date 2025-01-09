@@ -10,6 +10,20 @@ document.getElementById('calcForm').addEventListener('submit', function(event) {
     let diesels500 = document.getElementById('diesels500').value.trim();
     let onibus = document.getElementById('onibus').value.trim();
 
+        // Verificação para impedir que todos os campos estejam vazios
+        if (
+          litros_combustivel === '' &&
+          energia_gasta === '' &&
+          gas === '' &&
+          etanol === '' &&
+          diesels10 === '' &&
+          diesels500 === '' &&
+          onibus === ''
+      ) {
+          alert('Por favor, preencha pelo menos um campo.');
+          return; // Impede o envio do formulário
+      }
+
       // Substitui valores vazios por zero
     litros_combustivel = litros_combustivel === '' ? 0 : parseFloat(litros_combustivel);
     energia_gasta = energia_gasta === '' ? 0 : parseFloat(energia_gasta);
@@ -73,7 +87,7 @@ document.getElementById('calcForm').addEventListener('submit', function(event) {
         }
 
         resultadoDiv.innerHTML +=  `  
-                <p>🪴 Você precisaria plantar ${arvores} árvores para neutralizar sua pegada de carbono.</p>
+                <p>🪴 Você precisaria plantar ${arvores} árvores/mês para neutralizar sua pegada de carbono. Sim, você leu isso certo.</p>
                 <p>❄️ Ela resulta no derretimento de ${derretimento} litros das calotas polares por mês.</p>
                 <p>🚗 Equivale a dirigir ${km} km com um carro econômico a gasolina. </p>
                 <p>🔥 A sua emissão equivale a ${desmatamento}m² de desamatamento florestal.</p>
