@@ -1,0 +1,169 @@
+/* Garantir que nenhum elemento ultrapasse a largura da tela */
+* {
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #faf1ea;
+    color: white;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Estilo do cabeçalho */
+header {
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #faf1ea;
+    border-bottom: 1px solid#f2e0d3;
+    width: 100%;
+    z-index: 10;
+  }
+
+  header h1 a{
+    color: #2d9d46;
+    text-decoration: none;
+  }
+  
+
+header h1{
+    padding-top: 10px;
+    font-family:  "Josefin Sans", sans-serif;
+  }
+
+/* Logo e Título alinhados lado a lado */
+/* Logo e Título alinhados lado a lado */
+.logo-title {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+  }
+  
+  .logo-title img {
+    width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 10px; /* Espaçamento entre a logo e o título */
+  }
+  
+  .logo-title h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: white;
+  }
+  
+  .logo img {
+    width: 100px;
+    display: flex;
+    align-items: center;
+  
+  }
+/* Estilo da navegação */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 30px;
+  }
+  
+  nav ul li a {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 320;
+    color: #1c150c;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  nav ul li a:hover {
+    color: #2d9d46;
+  }
+  
+  #map {
+    height:500px;
+    width: 100%;
+}
+
+
+
+/* Estilo da seção monitorar */
+#monitorar {
+    padding: 20px;
+    background-color: #faf1ea;
+    margin-top: 20px;
+    text-align: justify;
+    max-width: 1200px; /* Define uma largura máxima para a seção */
+    margin: 20px auto; /* Centraliza a seção na página */
+}
+
+#monitorar h1 {
+    font-family: "Josefin Sans", sans-serif;
+    text-align: left;
+    font-size: 25px;
+    color: #2d9d46;
+    margin-bottom: 20px;
+}
+
+#monitorar h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: left;
+  font-size: 25px;
+  color: #2d9d46;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os parágrafos */
+#monitorar p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #1c150c;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify; /* Alinha o texto dos parágrafos */
+  padding: 0 10px; /* Adiciona um pouco de padding para melhorar a legibilidade */
+}
+/* Estilo para o mapa */
+#map {
+  width: 100%;
+  height: 500px; /* Altura padrão para o mapa */
+  margin: 0 auto; /* Centraliza o mapa */
+  border: 5px solid #2d9d46; /* Adiciona uma borda ao mapa */
+  border-radius: 10px; /* Adiciona cantos arredondados ao mapa */
+  text-align: center; /* Centraliza o mapa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.424); 
+}
+
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    nav ul {
+        padding-top: 20px;
+        flex-direction: row; /* Links do menu em linha (lado a lado) */
+        flex-wrap: wrap; /* Permite que eles quebrem de linha se necessário */
+        justify-content: center; /* Centraliza os links no mobile */
+      }
+  
+    nav ul li {
+      margin: 10px 10px;
+    }
+  
+    section {
+      flex-direction: column;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    #map {
+      height: 500px; /* Altura reduzida para dispositivos móveis */
+  }
+  #monitorar p {
+    font-size: 16px; /* Reduz o tamanho da fonte para dispositivos móveis */
+    padding: 0 5px; /* Reduz o padding para dispositivos móveis */
+}
+}

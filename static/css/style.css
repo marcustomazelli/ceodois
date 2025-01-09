@@ -1,0 +1,226 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#faf1ea;
+    color:#1c150c;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+  }
+  
+  
+  /* Estilo do cabeçalho */
+  
+  header h1{
+    padding-top: 10px;
+    font-family:  "Josefin Sans", sans-serif;
+  }
+  
+  section h1{
+    font-family:"Josefin Sans", sans-serif;
+    font-size: 50px;
+    color:#2d9d46;
+  }
+  
+  section h2{
+    color:#1c150c;
+    font-size: 15px;
+  }
+  
+  h2, p{
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  
+  header {
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #faf1ea;
+    border-bottom: 1px solid#f2e0d3;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  header h1 a{
+    color:#2d9d46;
+    text-decoration: none;
+  }
+  
+  
+  /* Logo e Título alinhados lado a lado */
+  .logo-title {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+  }
+  
+  .logo-title img {
+    width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 10px; /* Espaçamento entre a logo e o título */
+  }
+  
+  .logo-title h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: white;
+  }
+  
+  .logo img {
+    width: 100px;
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 30px;
+  }
+  
+  nav ul li a {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 320;
+    color: #1c150c;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  nav ul li a:hover {
+    color: #2d9d46;
+  }
+  
+  /* Estilos das seções */
+  section {
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+    align-items: center;
+    padding: 0px 50px;
+    border-bottom: 1px solid#f2e0d3;
+    min-height: 100vh;
+  
+  }
+  
+  
+  .text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .image {
+    flex: 1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Estilo dos botões (agora links) */
+  .btn {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top:10px;
+    font-size: 1em;
+    color: white;
+    background-color:  #2d9d46; /* Cor de fundo */
+    border: none;
+    border-radius: 0px;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+  }
+  
+  
+  .btn:hover {
+    background-color: #2d8a2f; /* Cor ao passar o mouse */
+  }
+  
+  
+  /* Responsividade para mobile */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    nav ul {
+        padding-top: 20px;
+        flex-direction: row; /* Links do menu em linha (lado a lado) */
+        flex-wrap: wrap; /* Permite que eles quebrem de linha se necessário */
+        justify-content: center; /* Centraliza os links no mobile */
+      }
+  
+    nav ul li {
+      margin: 10px 10px;
+    }
+  
+    section {
+      flex-direction: column;
+      text-align: center;
+      padding: 50px 20px;
+    }
+  
+    .text {
+      margin: 0;
+      text-align: justify; /* Alinha o texto no mobile também */
+    }
+  
+    #introducao .image {
+      width: 100%;
+      padding: 0 10px;
+    }
+  
+    #introducao .image img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Estilos específicos para a seção do time */
+  .team-members {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .member {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Seção de Agradecimentos */
+  #thanks {
+    text-align: center;
+  }
+  
+  #thanks img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  

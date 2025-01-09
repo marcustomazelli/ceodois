@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/monitorar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Monitoramento</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="/static/img/img-logo/logo.png" alt="logo">
+            <h1><a href="/">CEODOIS</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">PROJETO</a></li>
+                <li><a href="/calculadora">CALCULADORA</a></li>
+                <li><a href="/monitorar">MONITORAR</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="monitorar">
+        <div>
+            <h1>Como monitoramos queimadas em tempo real?</h1>
+        </div>
+        <div>
+            <p>Nosso sistema de monitoramento de queimadas utiliza dados avançados da <strong>NASA</strong> via satélite para fornecer informações precisas e atualizadas sobre focos de incêndio no Brasil. O processamento desses satélites é de 2 dias, ou seja, ele busca focos de incêndios nos últimos 2 dias e são atualizados em um período de 3 horas. <strong>Cada circulo vermelho no mapa é um foco de incêndio</strong>. Com essa ferramenta, esperamos contribuir para a gestão eficaz de recursos naturais e a resposta rápida a emergências, ajudando a proteger nosso meio ambiente. Iremos detalhar melhor sobre esse projeto abaixo:</p>
+        </div>
+        <div id="map"></div>
+        <div>
+            <h2>O que é o FIRMS?</h2>
+            <p>O FIRMS (Fire Information for Resource Management System) é um sistema desenvolvido pela NASA que fornece informações quase em tempo real sobre queimadas e incêndios florestais em todo o mundo. Utilizando dados de satélites, o FIRMS detecta e monitora focos de incêndio, fornecendo informações valiosas para a gestão de recursos naturais, resposta a emergências e pesquisa científica.</p>
+            <h2>Coleta de Dados:</h2>
+            <p>Utilizamos dados do satélites de modelo:  VIIRS_NOAA20_NRT(Visible Infrared Imaging Radiometer Suite)</p>
+            <p>Os dados são atualizados regularmente, a cada 3 horas.</p>
+            <h2>Processamento dos Dados:</h2>
+            <p>Os dados brutos são processados para identificar a localização, intensidade e confiança dos focos de incêndio.</p>
+            <p>Cada foco de incêndio é representado por coordenadas geográficas (latitude e longitude), brilho (intensidade do fogo) e um nível de confiança.</p>
+            <h2>Visualização no Mapa:</h2>
+            <p>Cada foco é representado por um marcador circular vermelho no mapa.</p>
+            <p>Ao clicar em um marcador, você pode ver informações detalhadas sobre o foco de incêndio, incluindo o brilho e o nível de confiança.</p>
+        </div>
+    </section>
+    <script src="/static/js/monitorar.js"></script>
+</body>
+</html>

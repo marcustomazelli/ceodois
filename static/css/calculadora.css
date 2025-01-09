@@ -1,0 +1,372 @@
+/* Estilos globais */
+
+/* Garantir que nenhum elemento ultrapasse a largura da tela */
+* {
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color:#faf1ea;
+    color:#1c150c;
+    overflow-x: hidden;
+  }
+  /* Forçar imagens a se ajustarem ao container */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* Limitar largura do container principal */
+  .container {
+    width: 100%; /* Garante que não ultrapasse a tela */
+    max-width: 1200px; /* Limite em telas grandes */
+    margin: 0 auto; /* Centraliza */
+    padding: 0 15px; /* Adiciona espaçamento interno */
+  }
+  
+  
+  /* Estilo do cabeçalho */
+  header {
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color:#faf1ea;
+    border-bottom: 1px solid#f2e0d3;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  header h1 a{
+    color:#2d9d46;
+    text-decoration: none;
+  }
+  header h1{
+    padding-top: 10px;
+    font-family:  "Josefin Sans", sans-serif;
+  }
+  /* Estilo da navegação */
+  nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  }
+  
+  nav ul li {
+  margin-left: 30px;
+  }
+  
+  nav ul li a {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 320;
+    color: #1c150c;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  nav ul li a:hover {
+  color: #2d9d46;
+  }
+  
+  section {
+    width: 100%; /* Garante que não ultrapasse a tela */
+    padding: 15px; /* Ajusta espaçamento interno */
+  }
+  section h2{
+    color: #2d9d46;
+    font-size: 15px;
+  }
+  
+  h2, p{
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  
+  
+  
+  /* Logo e Título alinhados lado a lado */
+  .logo-title {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+  }
+  
+  .logo-title img {
+    width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 10px; /* Espaçamento entre a logo e o título */
+  }
+  
+  .logo-title h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: white;
+  }
+  
+  .logo img {
+    width: 100px;
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  
+  #introducao {
+  padding: 20px;
+  background-color:#faf1ea;
+  margin-top: 20px;
+  }
+  
+  #introducao  #texto {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  }
+  
+  #introducao  #texto h2 {
+    font-family:"Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  }
+  #introducao  #texto h3 {
+    font-family:"Josefin Sans", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2d9d46;
+    }
+  
+  #introducao  #texto p {
+  margin-bottom: 15px;
+  }
+  
+  /* Estilo da seção contexto */
+  #contexto  {
+    padding: 20px;
+    background-color:#faf1ea;
+    margin-top: 20px;
+  }
+  
+  #contexto  #conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  }
+  
+  #contexto  #conteudo h2 {
+  font-family: "Josefin Sans", sans-serif;;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  }
+  
+  #contexto  #conteudo p {
+  margin-bottom: 15px;
+  }
+  
+  #contexto  #conteudo a {
+  color: #2d9d46;
+  text-decoration: none;
+  font-weight: bold;
+  }
+  
+  #contexto  #conteudo a:hover {
+  color: #1a6404;
+  }
+  
+  section form label {
+    font-family: "Josefin Sans", sans-serif;
+  }
+  
+  /* Ajuste para input e botões */
+  input, button {
+    max-width: 100%; /* Garante que se ajustem no mobile */
+  }
+  
+  section#calcular {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  section#calcular h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #2d9d46;
+  }
+  
+  section#calcular h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #2d9d46;
+  }
+  
+  section#calcular .titulo {
+    margin-bottom: 20px;
+  }
+  
+  section#calcular .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  section#calcular form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  section#calcular label {
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  section#calcular input {
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px; 
+  }
+  
+  section#calcular button {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2d9d46;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  section#calcular button:hover {
+    color:  #1f2521;
+  }
+  
+  #resultado {
+    padding: 10px;
+    background-color: #faf1ea;
+    margin: 20px auto; /* Centraliza a div horizontalmente */
+    width: 100%; /* Define uma largura para a div */
+    max-width: 800px; /* Define uma largura máxima para a div */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+  }
+  
+  /* Estilo do resultado */
+  #resultado h2{
+  font-family: "Josefin Sans", sans-serif;
+  text-align: left;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #2d9d46;
+  }
+  
+  #resultado p{
+  font-family: "Josefin Sans", sans-serif;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  color:  #1c150c;
+  }
+  
+  #resultado a{
+    color: #2d9d46;
+    text-decoration: none;
+  }
+  
+  #resultado a:hover {
+    color: #1a6404;
+  }
+  
+  
+  /* Media Queries para Responsividade */
+  @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  
+  nav ul {
+    padding-top: 20px;
+    flex-direction: row; /* Links do menu em linha (lado a lado) */
+    flex-wrap: wrap; /* Permite que eles quebrem de linha se necessário */
+    justify-content: center; /* Centraliza os links no mobile */
+  }
+  
+  nav ul li {
+    width: auto; /* Evita largura fixa */
+    margin: 10px; /* Ajusta espaçamento */
+  }
+  section h1 {
+    text-align: left;
+    padding: px;
+    font-size: 36px;
+  }
+  
+  section h2 {
+    text-align: left;
+    padding: px;
+    font-size: 20px;
+  }
+  
+  #contexto  {
+    padding: 10px;
+  }
+  
+  #contexto  #conteudo {
+    padding: 0 10px; /* Espaços laterais */
+  }
+  
+  #calcular {
+    padding: 10px;
+  }
+  
+  #calcular h1 {
+    text-align: center;
+  }
+  
+  #calcular .form-container {
+    padding: 0 10px; /* Espaços laterais */
+  }
+  
+  #calcular input {
+    padding: 8px;
+  }
+  
+  #calcular button {
+    padding: 8px 16px;
+  }
+  
+  #lista {
+    padding: 10px;
+  }
+  
+  #lista h2 {
+    font-size: 18px;
+    text-align: left /* Centraliza os títulos no mobile */
+  }
+  
+  #lista h3 {
+    font-size: 16px;
+    text-align: left; /* Mantém os subtítulos alinhados à esquerda */
+  }
+  
+  #lista p, #lista ol, #lista ul, #lista li {
+    font-size: 15px;
+    text-align: justify; /* Corrige o alinhamento de parágrafos e listas */
+  }
+  }
+  
+  

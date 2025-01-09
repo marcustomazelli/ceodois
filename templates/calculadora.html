@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="/static/css/calculadora.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cabeçalho com navegação -->
+  <header>
+    <div class="logo-title">
+        <img src="/static/img/img-logo/logo.png" alt="logo">
+        <h1><a href="/">CEODOIS</a></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">PROJETO</a></li>
+        <li><a href="/calculadora">CALCULADORA</a></li>
+        <li><a href="/monitorar">MONITORAR</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Introdução -->
+  <section id="introducao">
+    <div id="texto">
+      <h2>Como calculamos a emissão de carbono?</h2>
+          <p>A emissão de dióxido de carbono (CO₂) é um dos principais indicadores do impacto ambiental causado pelas atividades humanas, como o consumo de energia e combustíveis. Pensando nisso, nossa calculadora utiliza fórmulas baseadas em fatores de emissão reconhecidos internacionalmente para traduzir o consumo cotidiano em números claros e tangíveis.</p>
+          <p>O cálculo é simples: ao inserir o consumo mensal de energia elétrica (kWh), gás de cozinha (quilogramas), gasolina e/ou etanol e/ou diesel (litros) e também a quilometragem diária de transporte público, aplicamos coeficientes específicos que indicam a quantidade de CO₂ emitida mensalmente por unidade de cada recurso. Abaixo da calculadora, explicamos como esses cálculos são realizados e as fontes utilizadas para definir os fatores de emissão.</p>
+      <h2>Como estimar o seu consumo para calcular a emissão de CO₂? </h2>
+          <p>
+          Sabemos que nem sempre é fácil lembrar quanto combustível, energia elétrica ou gás de cozinha você consome por mês. Para te ajudar, aqui estão algumas dicas simples para estimar seus gastos e obter resultados mais precisos na nossa calculadora:
+          </p>
+        <h3>Consumo de Energia Elétrica (kWh):</h3>
+          <p>Verifique sua última conta de luz. O consumo mensal é geralmente indicado em <strong>quilowatt-hora (kWh)</strong>, destacado no boleto.</p>
+        <h3>Consumo de Energia Elétrica (kWh):</h3>
+          <p>Verifique sua última conta de luz. O consumo mensal é geralmente indicado em <strong>quilowatt-hora (kWh)</strong>, destacado no boleto.</p>
+        <h3>Consumo de Gás de Cozinha (GLP):</h3>
+          <p>Um botijão de gás tradicional pesa <strong>13 kg</strong> e dura, em média, entre <strong>2 e 3 meses</strong> para uma família de 4 pessoas que cozinhe regularmente.</p>          
+          <p>Se um botijão dura 2 meses, o consumo mensal é de cerca de <strong>6,5 kg por mês</strong></p>
+          <p>Caso use gás com menos frequência, pode considerar um consumo menor, como <strong>4 a 5 kg por mês</strong></p>
+        <h3>Consumo de Combustível (Gasolina, Etanol, Diesel - Litros):</h3>
+          <p>Não sabe quantos litros de combustível consome por mês? Não tem problema! Você pode estimar de forma simples. Basta saber quantos quilômetros você percorre mensalmente e a média de consumo do seu carro. Divida a quilometragem percorrida no mês pelo consumo médio (km/L) que seu veículo faz.</p>
+        <h3>Consumo de Transporte Público (Ônibus):</h3>
+          <p>Para calcular sua emissão de CO₂, insira a distância em quilometros que você percorre diariamente usando ônibus. Nossa calculadora considera os fatores de emissão específicos para o tipo de transporte e fornece um resultado aproximado.</p>
+          <p>
+            Com essas dicas simples, você consegue preencher a calculadora com mais confiança. E lembre-se: não precisa ser exato. A ideia aqui é entender seu impacto e pensar em formas de reduzi-lo!
+          </p>
+        </div>
+  
+  </section>
+
+  <!-- Calculadora de CO₂ -->
+  <section id="calcular">
+    <div class="titulo">
+      <h1>Calculadora de CO₂</h1>
+    </div>
+    <h3>Caso não gaste algum desses emissores, deixe em branco.</h3>
+    <div class="form-container">
+      <form id="calcForm">
+
+        <h3>Gastos em casa (Mensal)</h3>
+        <label for="energia_gasta">Consumo de energia elétrica (kWh):</label>
+        <input type="number" id="energia_gasta" name="energy"  placeholder="Ex.: 800">
+        
+        <label for="gas">Gás de Cozinha (kg):</label>
+        <input type="number" id="gas" name="gas" placeholder="Ex.: 8">
+
+        <h3>Transportes Particulares (Mensal)</h3>
+        <label for="litros_combustivel">Consumo de Gasolina (L):</label>
+        <input type="number" id="litros_combustivel" name="car"  placeholder="Ex.: 100">
+
+        <label for="etanol">Consumo de Etanol (L):</label>
+        <input type="number" id="etanol" name="etanol"  placeholder="Ex.: 100">
+
+        <label for="diesels10">Consumo de Diesel S10 (L):</label>
+        <input type="number" id="diesels10" name="diesels10"  placeholder="Ex.: 100">
+
+        <label for="diesels500">Consumo de Diesel S500 (L):</label>
+        <input type="number" id="diesels500" name="diesels500"  placeholder="Ex.: 100">
+
+        <h3>Transporte Público (Mensal)</h3>
+        <label for="onibusl">Ônibus (km / dia):</label>
+        <input type="number" id="onibus" name="onibus"  placeholder="Ex.: 12">
+
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="resultado"></div>
+    </div>
+  </section>
+
+  <!-- Contexto  -->
+   <section id="contexto">
+    <div id="conteudo">
+      <h2>Emissão de CO₂ pelo consumo de combustível</h2>
+        <p>Quando combustíveis fósseis como gasolina ou diesel são queimados, eles liberam dióxido de carbono como subproduto. A quantidade de CO₂ emitida por litro de combustível consumido varia dependendo do tipo de combustível.</p>
+      <h2>Fator de emissão utilizado: 2,3 kg CO₂ por litro de gasolina</h2>
+        <p>Esse valor é amplamente aceito em estudos ambientais e relatórios de sustentabilidade. Ele representa a quantidade média de CO₂ emitida quando 1 litro de gasolina é queimado. Fonte: <a href="https://www.iea.org/">Agência Internacional de Energia (IEA)</a> e dados de padrões de emissões veiculares.</p>
+        <p>Por que 2,3 kg? A gasolina é composta majoritariamente por hidrocarbonetos. Quando queimada, o carbono contido nela se combina com o oxigênio, formando CO₂. Um litro de gasolina pesa cerca de 0,75 kg, mas, devido à reação química com o oxigênio, o peso do CO₂ liberado é significativamente maior.</p>
+      <h2>Fator de emissão utilizado: 1,5 kg CO₂ por litro de etanol</h2>
+        <p> Ele indica a quantidade média de CO₂ liberada na atmosfera ao queimar 1 litro de etanol. Fontes: Agência Internacional de Energia (IEA) e relatórios técnicos especializados em emissões de combustíveis renováveis.</p>
+        <p>Por que 1,5 kg? O etanol é composto principalmente por moléculas de carbono, hidrogênio e oxigênio (C₂H₅OH). Quando queimado, o carbono nele contido reage com o oxigênio do ar, formando CO₂. Apesar de o etanol ser menos denso do que a gasolina (cerca de 0,79 kg/litro), a reação química gera emissões proporcionais ao conteúdo de carbono presente.Além disso, o etanol é considerado um biocombustível, pois é derivado de plantas como cana-de-açúcar ou milho. Isso significa que o CO₂ emitido durante sua queima foi previamente absorvido pelas plantas durante o processo de fotossíntese, o que faz com que ele tenha um impacto ambiental menor em comparação com combustíveis fósseis.</p>      
+      <h2>Emissão de CO₂ pelo consumo de Diesel</h2>
+        <p>O diesel é amplamente utilizado em veículos de carga, transporte público e máquinas agrícolas, e é o combustível mais poluente entre os comuns. Quando queimado, libera grandes quantidades de dióxido de carbono devido à sua alta densidade energética e ao maior teor de carbono por litro.</p>
+      <h2>Fator de emissão utilizado: 2,68 kg CO₂ por litro de diesel</h2>
+        <p>Esse fator representa a quantidade média de CO₂ liberada por litro de diesel queimado. Fontes: Agência Internacional de Energia (IEA) e estudos sobre emissões de combustíveis fósseis. É importante destacar que, além das emissões de carbono, o diesel também libera outros poluentes que afetam a qualidade do ar e a saúde pública.</p>
+        <p>Por que 2,68 kg? Um litro de diesel pesa cerca de 0,84 kg, mas, devido à sua composição rica em carbono, o processo de combustão produz emissões muito superiores ao peso do combustível queimado. Isso faz com que o diesel seja um dos combustíveis com maior impacto ambiental.</p>
+        
+      <h2>Emissão de CO₂ pelo uso de Transportes Públicos</h2>
+        <p>Os transportes públicos são opções mais sustentáveis do que o uso de veículos individuais, pois permitem que mais pessoas sejam transportadas com uma menor pegada de carbono por passageiro. No entanto, eles também geram emissões de CO₂, dependendo do combustível ou da fonte de energia utilizada.</p>
+      <h2>Fator de emissão utilizado: 1,3 kg CO₂ por km para ônibus a diesel</h2>
+        <p>Os ônibus a diesel são responsáveis por emitir cerca de 1,3 kg de CO₂ por quilômetro rodado. Esse valor pode ser diluído dependendo da lotação do veículo, sendo menor por passageiro quando o ônibus está cheio. Por outro lado, se a lotação for baixa, as emissões por pessoa aumentam proporcionalmente.</p>
+        
+      <h2>Emissão de CO₂ pelo consumo de energia elétrica</h2>
+        <p>O consumo de eletricidade também gera emissões de CO₂, dependendo da matriz energética do país. Em locais onde a energia é gerada principalmente a partir de fontes fósseis, como carvão e gás natural, as emissões são mais altas. Já em países com maior utilização de energia renovável, as emissões por quilowatt-hora (kWh) são menores.</p>
+      <h2>Fator de emissão utilizado: 0,1 kg CO₂ por kWh consumido</h2>
+        <p>No Brasil, a maior parte da energia elétrica provém de fontes renováveis, como hidrelétricas, eólicas e solares. Isso reduz drasticamente as emissões de CO₂ por kWh quando comparado a países que utilizam carvão ou gás natural como base da geração de energia. Aproximadamente, o fator de emissão no Brasil é em média 0,1 kg CO₂/kWh, embora possa variar ligeiramente dependendo da região e da época do ano. Esse valor é significativamente mais baixo do que a média mundial, que gira em torno de 0,233 kg CO₂/kWh.</p>
+      <h2>Emissão de CO₂ pelo consumo de Gás de cozinha</h2>
+        <p>Sim, o gás de cozinha também contribui significativamente para a emissão de carbono. O Gás de Cozinha e Sua Contribuição para a Emissão de Carbono</p>
+      <h2>Fatores que influenciam o fator de emissão do GLP:</h2>
+        <p>1. O tipo de gás de cozinha utilizado: o GLP é uma mistura de gases, sendo o propano e o butano os principais componentes. O propano, por exemplo, tem um potencial de aquecimento global (GWP) maior do que o butano, o que significa que ele tem um impacto maior no aquecimento global.</p>
+        <p>2. A eficiência do fogão: fogões mais eficientes consomem menos gás para produzir a mesma quantidade de calor, o que reduz as emissões de CO₂.</p>
+        <p>3. A origem do gás: o GLP pode ser produzido a partir de fontes fósseis, como o petróleo, ou de fontes renováveis, como a biomassa. O gás de cozinha produzido a partir de fontes renováveis tem um impacto menor no clima.</p>
+        <p>O fator de emissão do GLP pode variar entre 2,5 e 3,5 kgCO2/kg, dependendo dos fatores mencionados acima. É importante ressaltar que esses valores são estimativas e podem variar de acordo com cada caso específico. Iremos utilizar 2,5 kgCO2/kg como fator nessa equação.</p>      
+      <h2>Fontes</h2>
+        <p>Estudo publicado na <a href="https://istoe.com.br/cada-tonelada-de-co2-derrete-3m%C2%B2-de-gelo-artico-aponta-estudo/">Nature Communications</a> (2019), que estima que cada tonelada de CO₂ emitida resulta no derretimento de cerca de 3 m² de gelo polar.</p>
+        <p><a href="https://antigo.aneel.gov.br/">ANEEL (Agência Nacional de Energia Elétrica)</a>: Publica relatórios sobre a matriz energética brasileira.</p>
+        <p><a href="https://www.ons.org.br/">ONS (Operador Nacional do Sistema Elétrico)</a>: Monitora e disponibiliza informações sobre o consumo de energia e as fontes de geração.</p>
+        <p>Relatórios do <a href="https://www.ipcc.ch/">IPCC (Painel Intergovernamental sobre Mudanças Climáticas)</a>: Fornece valores globais e regionais para fatores de emissão de CO₂.</p>
+
+    </div>
+    <div class="image">
+      <img src="" alt="">
+    </div>
+   </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="/static/js/calculadora.js"></script>
+
+</body>
+</html>
