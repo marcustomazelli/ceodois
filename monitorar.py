@@ -5,7 +5,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MAP_KEY = os.getenv('MAP_KEY')
+API_KEY = os.getenv('API_KEY')
+print(f'MAP_KEY: {API_KEY}')
+
 
 monitorar_app = Blueprint('monitorar_app', __name__)
 
@@ -16,7 +18,7 @@ def qualidade_ar():
 # now let's check how many transactions we have
 import pandas as pd
 
-url = 'https://firms.modaps.eosdis.nasa.gov/mapserver/mapkey_status/?MAP_KEY=%s' % MAP_KEY
+url = 'https://firms.modaps.eosdis.nasa.gov/mapserver/mapkey_status/?MAP_KEY=%s' % API_KEY
 try:
   df = pd.read_json(url,  typ='series')
   print(df)
@@ -28,7 +30,7 @@ except:
 @monitorar_app.route('/api/queimadas', methods=['GET'])
 def queimadas():
     # URL da API FIRMS para os últimos 2 dias de dados MODIS para o Brasil
-    brazil_url = 'https://firms.modaps.eosdis.nasa.gov/api/country/csv/%s/VIIRS_NOAA21_NRT/BRA/2' % MAP_KEY
+    brazil_url = 'https://firms.modaps.eosdis.nasa.gov/api/country/csv/%s/VIIRS_NOAA21_NRT/BRA/2' % API_KEY
 
     df_brazil = pd.read_csv(brazil_url)
 
