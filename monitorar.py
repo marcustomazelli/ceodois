@@ -35,8 +35,6 @@ def queimadas():
     df_brazil = pd.read_csv(brazil_url)
 
     json_brazil = df_brazil.to_dict(orient='records')  # Transforma diretamente em lista de dicionários 
-
-    print(json_brazil)
     
     # Retornar os dados como resposta JSON
     return jsonify(json_brazil)
