@@ -23,7 +23,7 @@ body {
   section h1{
     font-family:"Josefin Sans", sans-serif;
     font-size: 50px;
-    color:#2d9d46;
+    color:#00564d;
   }
   
   section h2{
@@ -49,7 +49,7 @@ body {
   }
   
   header h1 a{
-    color:#2d9d46;
+    color:#00564d;
     text-decoration: none;
   }
   
@@ -61,7 +61,7 @@ body {
   }
   
   .logo-title img {
-    width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    width: 70px; /* Ajuste o tamanho da logo conforme necessário */
     margin-right: 10px; /* Espaçamento entre a logo e o título */
   }
   
@@ -100,7 +100,7 @@ body {
   }
   
   nav ul li a:hover {
-    color: #2d9d46;
+    color: #00564d;
   }
   
   /* Estilos das seções */
@@ -141,7 +141,7 @@ body {
     margin-top:10px;
     font-size: 1em;
     color: white;
-    background-color:  #2d9d46; /* Cor de fundo */
+    background-color:  #00564d; /* Cor de fundo */
     border: none;
     border-radius: 0px;
     text-decoration: none; /* Remove o sublinhado dos links */
@@ -152,7 +152,7 @@ body {
   
   
   .btn:hover {
-    background-color: #2d8a2f; /* Cor ao passar o mouse */
+    background-color: #00332e; /* Cor ao passar o mouse */
   }
   
   

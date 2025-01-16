@@ -40,7 +40,7 @@
   }
   
   header h1 a{
-    color:#2d9d46;
+    color:#00564d;
     text-decoration: none;
   }
   header h1{
@@ -68,7 +68,7 @@
   }
   
   nav ul li a:hover {
-  color: #2d9d46;
+  color: #00564d;
   }
   
   section {
@@ -76,7 +76,7 @@
     padding: 15px; /* Ajusta espaçamento interno */
   }
   section h2{
-    color: #2d9d46;
+    color: #00564d;
     font-size: 15px;
   }
   
@@ -94,7 +94,7 @@
   }
   
   .logo-title img {
-    width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    width: 70px; /* Ajuste o tamanho da logo conforme necessário */
     margin-right: 10px; /* Espaçamento entre a logo e o título */
   }
   
@@ -135,7 +135,7 @@
     font-size: 17px;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #2d9d46;
+    color: #00564d;
     }
   
   #introducao  #texto p {
@@ -167,13 +167,13 @@
   }
   
   #contexto  #conteudo a {
-  color: #2d9d46;
+  color: #00564d;
   text-decoration: none;
   font-weight: bold;
   }
   
   #contexto  #conteudo a:hover {
-  color: #1a6404;
+  color: #00332e;
   }
   
   section form label {
@@ -194,14 +194,14 @@
     font-family: "Josefin Sans", sans-serif;
     font-size: 40px;
     margin-bottom: 20px;
-    color: #2d9d46;
+    color: #00564d;
   }
   
   section#calcular h3 {
     font-family: "Josefin Sans", sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
-    color: #2d9d46;
+    color: #00564d;
   }
   
   section#calcular .titulo {
@@ -240,7 +240,7 @@
     font-weight: bold;
     margin-top: 20px;
     padding: 10px;
-    background-color: #2d9d46;
+    background-color: #00564d;
     color: white;
     border: none;
     cursor: pointer;
@@ -268,7 +268,7 @@
   padding: 5px;
   border-radius: 5px;
   font-size: 20px;
-  color: #2d9d46;
+  color: #00564d;
   }
   
   #resultado p{
@@ -283,12 +283,12 @@
   }
   
   #resultado a{
-    color: #2d9d46;
+    color: #00564d;
     text-decoration: none;
   }
   
   #resultado a:hover {
-    color: #1a6404;
+    color: #00332e;
   }
   
   

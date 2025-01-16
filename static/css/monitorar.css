@@ -25,7 +25,7 @@ header {
   }
 
   header h1 a{
-    color: #2d9d46;
+    color: #00564d;
     text-decoration: none;
   }
   
@@ -43,7 +43,7 @@ header h1{
   }
   
   .logo-title img {
-    width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    width: 70px; /* Ajuste o tamanho da logo conforme necessário */
     margin-right: 10px; /* Espaçamento entre a logo e o título */
   }
   
@@ -81,7 +81,7 @@ nav ul {
   }
   
   nav ul li a:hover {
-    color: #2d9d46;
+    color: #00564d;
   }
   
   #map {
@@ -105,7 +105,7 @@ nav ul {
     font-family: "Josefin Sans", sans-serif;
     text-align: left;
     font-size: 25px;
-    color: #2d9d46;
+    color: #00564d;
     margin-bottom: 20px;
 }
 
@@ -113,7 +113,7 @@ nav ul {
   font-family: "Josefin Sans", sans-serif;
   text-align: left;
   font-size: 25px;
-  color: #2d9d46;
+  color: #00564d;
   margin-bottom: 20px;
 }
 
@@ -132,7 +132,7 @@ nav ul {
   width: 100%;
   height: 500px; /* Altura padrão para o mapa */
   margin: 0 auto; /* Centraliza o mapa */
-  border: 5px solid #2d9d46; /* Adiciona uma borda ao mapa */
+  border: 5px solid #00564d; /* Adiciona uma borda ao mapa */
   border-radius: 10px; /* Adiciona cantos arredondados ao mapa */
   text-align: center; /* Centraliza o mapa */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.424); 
