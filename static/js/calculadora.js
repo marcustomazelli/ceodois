@@ -72,17 +72,19 @@ document.getElementById('calcForm').addEventListener('submit', function(event) {
 
         if( emissao <= 500){
           resultadoDiv.innerHTML += `
-          <p>Sua pegada de carbono está abaixo da média nacional! Parabéns! 🎉 </p> 
+          <p>Sua pegada de carbono está abaixo da média nacional! Parabéns! </p> 
+          <p>Nada como ser o menos destrutivo entre os destrutivos. Palmas lentas pra você. 👏</p>
           `;
         }
         if( emissao > 500 && emissao < 916){
           resultadoDiv.innerHTML += `
-          <p>Você está dentro da média, mas ainda pode reduzir sua pegada de carbono. 🎯</p>
+          <p>Você está na média, ou seja, dividindo o trabalho de fritar o planeta igualmente com os outros.</p>
           `;
         }
         if( emissao >= 916){
           resultadoDiv.innerHTML += `
-          <p>Alerta vermelho! 🚨 Suas emissões estão acima da média nacional.</p>
+          <p>Incrível! Você está a um passo de ser nomeado o 'Cliente VIP do Aquecimento Global'.</p>
+          <p>🚨 Suas emissões estão acima da média.</p>
           `;
         }
 

@@ -6,7 +6,6 @@ from monitorar import monitorar_app
 # Cria uma instância do Flask
 app = Flask(__name__)
 
-# Registra o Blueprint da calculadora
 app.register_blueprint(calculadora_app)
 app.register_blueprint(monitorar_app)
 
