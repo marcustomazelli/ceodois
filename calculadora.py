@@ -42,6 +42,7 @@ def calcular_arvores_necessarias(emissao):
 def calcular_derretimento_polar(emissao):
     gelo_derretido_mcubico = emissao/1000 * 0.00034 #Um estudo de 2019 da Nature Communications estimou que para cada tonelada de CO₂ emitida, aproximadamente 0,00034 metros quadrados de gelo
     gelo_derretido_litros = gelo_derretido_mcubico * 1000
+    gelo_derretido_litros = gelo_derretido_litros * 12 #12 meses
 
     return gelo_derretido_litros
 

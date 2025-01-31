@@ -90,7 +90,7 @@ document.getElementById('calcForm').addEventListener('submit', function(event) {
 
         resultadoDiv.innerHTML +=  `  
                 <p>🌲 Você precisaria plantar ${arvores} árvores/mês para neutralizar sua pegada de carbono. Sim, você leu isso certo.</p>
-                <p>❄️ Ela resulta no derretimento de ${derretimento} litros das calotas polares por mês.</p>
+                <p>❄️ Ela resulta no derretimento de ${derretimento} litros das calotas polares por ano.</p>
                 <p>🚗 Equivale a dirigir ${km} km com um carro econômico a gasolina. </p>
                 <p>🔥 A sua emissão equivale a ${desmatamento}m² de desamatamento florestal.</p>
                 <p>Lembre-se, não são valores exatos, mas sim aproximados devido as variabilidades dos fatores cotidianos.</p>
