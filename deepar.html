@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto AR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        
+        #deepar-div {
+            margin: 20px auto;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background: #000;
+        }
+        
+        .controls {
+            margin: 20px 0;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎭 Meu Projeto de Realidade Aumentada</h1>
+    
+    <!-- Aqui vai aparecer a câmera com os filtros -->
+    <div style='width: 640px; height: 480px' id='deepar-div'></div>
+    
+    <div class="controls">
+        <button onclick="trocarFiltro('aviators')">🕶️ Óculos</button>
+        <button onclick="trocarFiltro('beard')">🧔 Barba</button>
+        <button onclick="tirarFoto()">📸 Foto</button>
+        <button onclick="ativarBlur()">🌫️ Blur Fundo</button>
+    </div>
+
+    <!-- Carregando o DeepAR -->
+    <script src='https://cdn.jsdelivr.net/npm/deepar/js/deepar.js'> </script>
+    
+    <script>
+        let deepAR;
+        
+        // Inicializar quando a página carregar
+        (async function() {
+            try {
+                console.log('Inicializando DeepAR...');
+                
+                deepAR = await deepar.initialize({
+                    licenseKey: '183146b4b2ab67ef2ceede3232dd4931f13da84c6cb447b11101c5ec0fc8235f544454cc724264a3', // ⚠️ Você precisa pegar isso no portal
+                    previewElement: document.querySelector('#deepar-div'),
+                    effect: 'https://cdn.jsdelivr.net/npm/deepar/effects/aviators'
+                });
+                
+                console.log('DeepAR inicializado com sucesso! 🎉');
+                
+                // Callback quando detectar rosto
+                deepAR.callbacks.onFaceVisibilityChanged = (visible) => {
+                    if (visible) {
+                        console.log("👤 Rosto detectado!");
+                    } else {
+                        console.log("❌ Nenhum rosto detectado");
+                    }
+                };
+                
+            } catch (error) {
+                console.error('Erro ao inicializar DeepAR:', error);
+                alert('Erro ao inicializar AR. Verifique sua license key!');
+            }
+        })();
+        
+        // Função para trocar filtros
+        async function trocarFiltro(filtro) {
+            if (!deepAR) return;
+            
+            try {
+                await deepAR.switchEffect(`https://cdn.jsdelivr.net/npm/deepar/effects/${filtro}`);
+                console.log(`Filtro trocado para: ${filtro}`);
+            } catch (error) {
+                console.error('Erro ao trocar filtro:', error);
+            }
+        }
+        
+        // Função para tirar foto
+        async function tirarFoto() {
+            if (!deepAR) return;
+            
+            try {
+                const image = await deepAR.takeScreenshot();
+                
+                // Criar link para download
+                const link = document.createElement('a');
+                link.download = 'minha-foto-ar.png';
+                link.href = image;
+                link.click();
+                
+                console.log('📸 Foto tirada!');
+            } catch (error) {
+                console.error('Erro ao tirar foto:', error);
+            }
+        }
+        
+        // Função para ativar blur no fundo
+        async function ativarBlur() {
+            if (!deepAR) return;
+            
+            try {
+                await deepAR.backgroundBlur(true, 5);
+                console.log('🌫️ Blur ativado!');
+            } catch (error) {
+                console.error('Erro ao ativar blur:', error);
+            }
+        }
+    </script>
+</body>
+</html>
